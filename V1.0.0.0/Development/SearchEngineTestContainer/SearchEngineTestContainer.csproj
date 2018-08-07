@@ -62,11 +62,11 @@
   <ItemGroup>
     <Compile Include="Common.AutomationRunners\MainTestsRunner.cs" />
     <Compile Include="Common.AutomationSequences\SearchTheWeb.cs" />
+    <Compile Include="Components.PageObjects\SearchEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Components.Engine\" />
-    <Folder Include="Components.PageObjects\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebDriverWrapper\WebDriverWrapper.csproj">
