@@ -64,6 +64,7 @@
     <Compile Include="Common.AutomationSequences\SearchTheWeb.cs" />
     <Compile Include="Components.PageObjects\SearchEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.ObjectsRepository\ObjectsRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Components.Engine\" />
