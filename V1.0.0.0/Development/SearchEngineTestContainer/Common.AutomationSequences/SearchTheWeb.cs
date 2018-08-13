@@ -14,9 +14,16 @@ namespace SearchEngineTestContainer.Common.AutomationSequences
 {
     class SearchTheWeb
     {
+        public string sEngineUrl { get; set; }
+
+        public string resultPattern { get; set; }
+
+        public string searchKeyword { get; set; }
+
         public object AutomationSequnce()
         {
-            var sEngine = new SearchEngine("https://www.yahoo.com");
+
+            var sEngine = new SearchEngine(sEngineUrl);
 
 
             try
@@ -24,9 +31,9 @@ namespace SearchEngineTestContainer.Common.AutomationSequences
 
 
                 var actual = false;
-                sEngine.Search("Udemy");
+                sEngine.Search(searchKeyword);
 
-                Assert.AreEqual(1, sEngine.validateSearchResults("https://www.udemy.com"));
+                Assert.AreEqual(1, sEngine.validateSearchResults(resultPattern));
 
                 actual = true;            
                 return actual;

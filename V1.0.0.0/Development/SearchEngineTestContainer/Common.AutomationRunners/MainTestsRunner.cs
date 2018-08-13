@@ -14,13 +14,22 @@ namespace SearchEngineTestContainer.Common.AutomationRunners
    [DeploymentItem("chromedriver.exe")]
    [DeploymentItem("geckodriver.exe")]
    [DeploymentItem("MicrosoftWebDriver.exe")]
+   [DeploymentItem("Resources.DataSources\\csvDataSource.csv")]
     public class MainTestsRunner
     {
 
         [TestMethod]
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "csvDataSource.csv", "csvDataSource#csv",DataAccessMethod.Sequential)]
         public void SearchTheWeb()
         {
             var testCase = new SearchTheWeb();
+
+            testCase.sEngineUrl = TestContext.DataRow["sEngineUrl"].ToString();
+
+            testCase.resultPattern = TestContext.DataRow["resultPattern"].ToString(); ;
+
+            testCase.searchKeyword = "Udemy";
+
             var actual = testCase.AutomationSequnce();
 
             Assert.AreEqual(true, actual);
