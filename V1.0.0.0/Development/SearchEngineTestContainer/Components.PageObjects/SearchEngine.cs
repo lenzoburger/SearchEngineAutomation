@@ -27,6 +27,20 @@ namespace SearchEngineTestContainer.Components.PageObjects
             }
         }
 
+        public SearchEngine(string url, string driverParams)
+        {
+            try
+            {
+                WebDriverParams = driverParams;
+                GoToUrl(url);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public void Search(string keyword)
         {
             try

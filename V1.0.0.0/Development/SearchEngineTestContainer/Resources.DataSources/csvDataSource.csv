@@ -1,4 +1,10 @@
-﻿sEngineUrl,resultPattern
-"https://www.yahoo.com","www.udemy.com"
-"https://www.google.com","https://www.udemy.com"
-"https://www.bing.com","https://www.udemy.com"
+sEngineUrl,resultPattern,driverParams
+http://www.google.com,https://www.udemy.com,"{""Driver"":""Chrome""}"
+http://www.bing.com,https://www.udemy.com,"{""Driver"":""Chrome""}"
+http://www.yahoo.com,www.udemy.com,"{""Driver"":""Chrome""}"
+http://www.google.com,https://www.udemy.com,"{""Driver"":""Firefox""}"
+http://www.bing.com,https://www.udemy.com,"{""Driver"":""Firefox""}"
+http://www.yahoo.com,www.udemy.com,"{""Driver"":""Firefox""}"
+http://www.google.com,https://www.udemy.com,"{""Driver"":""IE""}"
+http://www.bing.com,https://www.udemy.com,"{""Driver"":""IE""}"
+http://www.yahoo.com,www.udemy.com,"{""Driver"":""IE""}"

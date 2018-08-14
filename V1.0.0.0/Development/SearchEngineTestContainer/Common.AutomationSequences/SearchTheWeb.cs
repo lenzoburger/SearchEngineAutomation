@@ -20,10 +20,12 @@ namespace SearchEngineTestContainer.Common.AutomationSequences
 
         public string searchKeyword { get; set; }
 
+        public string driverParams { get; set; }
+
         public object AutomationSequnce()
         {
 
-            var sEngine = new SearchEngine(sEngineUrl);
+            var sEngine = new SearchEngine(sEngineUrl, driverParams);
 
 
             try
