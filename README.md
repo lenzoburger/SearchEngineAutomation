@@ -22,7 +22,9 @@ USAGE
 
 2.  Launch Windows Explorer
 
-3.  Navigate to `C:\Users\<USERNAME>\Documents\Automation.Repository` (If you wish, you may update this path in VS project _Post Build Events_)
+3.  Navigate to `C:\Users\<USERNAME>\Documents\Automation.Repository` (Copy this folder if you wish to run tests on another machine/environment)
+
+    *  If you wish, you may update this path in VS project _Post Build Events_
 
 4.  Double Click _**Runtests.bat**_
 
@@ -36,7 +38,9 @@ USAGE
 
 2.  Launch Windows Explorer
 
-3.  Navigate to `C:\Users\<USERNAME>\Documents\Automation.Repository\SearchEngineTestContainer\<Version X.X.X.X>` (You may update this path in VS project _Post Build Events_)
+3.  Navigate to `C:\Users\<USERNAME>\Documents\Automation.Repository\SearchEngineTestContainer\<Version X.X.X.X>` (Copy this folder if you wish to run tests on another machine/environment)
+
+    *  If you wish, you may update this path in VS project _Post Build Events_
 
 4.  Launch **Command Prompt (CMD)**
 
