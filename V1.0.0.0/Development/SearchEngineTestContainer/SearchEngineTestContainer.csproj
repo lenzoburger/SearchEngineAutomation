@@ -105,7 +105,19 @@
     <PostBuildEvent>cd $(ProjectDir)bin\$(Configuration)
 xcopy /y /e *.* ..\..\..\..\Drop\$(Configuration)
 cd ..\..\..\..\OuterReferences\$(Configuration)
-xcopy /y /e *.exe ..\..\Drop\$(Configuration)</PostBuildEvent>
+xcopy /y /e *.exe ..\..\Drop\$(Configuration)
+cd ..\..\Drop\$(Configuration)
+md "%25systemdrive%25%25homepath%25\Documents\Automation.Repository"
+md "%25systemdrive%25%25homepath%25\Documents\Automation.Repository\$(ProjectName)"
+md "%25systemdrive%25%25homepath%25\Documents\Automation.Repository\$(ProjectName)\$(Version)"
+xcopy /y /e *.* "%25systemdrive%25%25homepath%25\Documents\Automation.Repository\$(ProjectName)\$(Version)"
+xcopy /y ..\Runtests.bat "%25systemdrive%25%25homepath%25\Documents\Automation.Repository\"
+cd "$(DevEnvDir)CommonExtensions\Microsoft\TestWindow"
+md "%25systemdrive%25%25homepath%25\Documents\Automation.Repository\TestWindow"
+xcopy /y /e *.* "%25systemdrive%25%25homepath%25\Documents\Automation.Repository\TestWindow"
+cd "%25systemdrive%25%25homepath%25\Documents\Automation.Repository"
+mklink /D Data_Resources "%25systemdrive%25%25homepath%25\Documents\Automation.Repository\$(ProjectName)\$(Version)\Resources.DataSources"
+</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
