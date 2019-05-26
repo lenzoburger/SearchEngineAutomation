@@ -1,5 +1,5 @@
 # SearchEngineAutomation
-C# Selenium Automation solution with Framework. Automate Search Engine Processes.
+Selenium C# Automation Framework - For Automated Testing of Multiple Search Engines with Multiple Browsers.
 
 USAGE
 ----
