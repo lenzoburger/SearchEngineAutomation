@@ -1,4 +1,4 @@
-# SearchEngineTestContainer
+# SearchEngineAutomation
 C# Selenium Automation solution with Framework. Automate Search Engine Processes.
 
 USAGE
